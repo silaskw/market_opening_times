@@ -1,90 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Dukascopy FX Market Hours</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <style>
-      html, body {
-        margin: 0;
-        padding: 0;
-        width: 100%;
-        height: 100%;
-        background-color: #444f5f;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-
-      /* Container automatically fills full width, 
-         and keeps a consistent aspect ratio */
-      #duka-container {
-        position: relative;
-        width: 100%;
-        height: 0;
-        padding-bottom: 55%; /* Controls aspect ratio (adjust for height) */
-        max-width: 100%;
-        overflow: hidden;
-      }
-
-      /* The widget fills the entire container */
-      #duka-widget {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100% !important;
-        height: 100% !important;
-      }
-
-      /* Small screens - make it taller */
-      @media (max-width: 768px) {
-        #duka-container {
-          padding-bottom: 80%;
-        }
-      }
-    </style>
-  </head>
-  <body>
-    <div id="duka-container">
-      <div id="duka-widget"></div>
-    </div>
-
-    <script type="text/javascript">
-      DukascopyApplet = {
-        "type": "fxmarkethours",
-        "params": {
-          "showHeader": false,
-          "displayMainMenu": true,
-          "displayTimezoneChange": true,
-          "displayInstrumentChange": true,
-          "displaySpreadIndicator": true,
-          "displayVolumeIndicator": true,
-          "displayVolatilityIndicator": true,
-          "displayFollowButton": true,
-          "allowTimezoneChange": true,
-          "allowInstrumentChange": true,
-          "defaultTimezone": 0,
-          "showIndicator": "0",
-          "defaultFollowMode": false,
-          "worldMapColor": "red",
-          "hoursBackground": "#444f5f",
-          "hoursActiveBackground": "#7d92b0",
-          "hoursTextColor": "#ffffff",
-          "currentHourBGColor": "#f9fdff",
-          "dstHourColor": "#0cf6ff",
-          "indicatorBarColor": "#5090c6",
-          "graphPointsColor": "#ffffff",
-          "spreadTopGraphColor": "#208c1c",
-          "spreadBottomGraphColor": "#dc0e0e",
-          "volatilityGraphColor": "#146fba",
-          "availableInstruments": "AUD/USD,EUR/USD,GBP/USD,NZD/USD,USD/CAD,USD/CHF,USD/JPY,USD/NOK,USD/SEK,USD/SGD,XAG/USD,XAU/USD,AUD/CAD,AUD/CHF,AUD/JPY,AUD/NZD,CAD/CHF,CAD/JPY,CHF/JPY,EUR/AUD,EUR/CAD,EUR/CHF,EUR/DKK,EUR/GBP,EUR/HKD,EUR/JPY,EUR/NOK,EUR/NZD,EUR/SEK,GBP/AUD,GBP/CAD,GBP/CHF,GBP/JPY,GBP/NZD,NZD/CAD,NZD/CHF,NZD/JPY,AUD/SGD,CAD/HKD,CHF/SGD,EUR/PLN,EUR/SGD,EUR/TRY,HKD/JPY,SGD/JPY,USD/DKK,USD/HKD,USD/MXN,USD/PLN,USD/RUB,USD/TRY,USD/ZAR",
-          "instrument": "EUR/USD",
-          "width": "100%",
-          "height": "100%",
-          "adv": "popup"
-        }
-      };
-    </script>
-    <script type="text/javascript" src="https://freeserv-static.dukascopy.com/2.0/core.js"></script>
-  </body>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Market Hours (Myfxbook)</title>
+  <style>
+    html,body {height:100%;margin:0;background:#0f1219;}
+    .wrap {position:relative;height:100vh;width:100%;}
+    iframe {position:absolute;inset:0;width:100%;height:100%;border:0}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <iframe
+      src="https://www.myfxbook.com/market-hours"
+      referrerpolicy="no-referrer"
+      loading="eager"
+      allowfullscreen>
+    </iframe>
+  </div>
+</body>
 </html>
